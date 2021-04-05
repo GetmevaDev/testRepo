@@ -1,31 +1,55 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import {graphql} from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-
+import SectionHeader from "../components/common/Section-Header/SectionHeader"
+import { Card } from "../components/common/Card/Card"
+import { AboutUs } from "../components/Home/AboutUs/AboutUs"
+import { SectionConsultation } from "../components/common/SectionConsultation/SectionConsultation"
+import { SectionContacts } from "../components/Home/SectionContacts/SectionContacts"
 import "../scss/main.scss"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
+const IndexPage = ({data}) => (
+  <Layout marginSocialMedia={50}>
+    <SectionHeader
+      pretitle={data.strapiHomePage.Section_Header.Pretitle}
+      title={data.strapiHomePage.Section_Header.Title}
+      linkReadMore={data.strapiHomePage.Section_Header.Link}
+      images={data.strapiHomePage.Section_Header.Slide_Images}
     />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Card data={data.strapiHomePage.Our_Advantages} variant={false} />
+    <AboutUs />
+    <SectionConsultation />
+      <SectionContacts />
   </Layout>
 )
 
 export default IndexPage
+export const query = graphql`
+    {
+        strapiHomePage {
+            Section_Header {
+                Pretitle
+                Title
+                Link
+                Slide_Images {
+                    alternativeText
+                    url
+                }
+            }
+            Our_Advantages {
+                Pretitle
+                Title
+                Cards {
+                    id
+                    link
+                    text
+                    title
+                    icon {
+                        alternativeText
+                        url
+                    }
+                }
+            }
+        }
+    }
+`
