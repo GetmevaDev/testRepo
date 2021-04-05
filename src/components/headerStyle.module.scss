@@ -55,9 +55,9 @@
 
 
         .openSubmenu{
-
-          height: 100%;
+          height: 200px;
           transition: .3s;
+          overflow-y: scroll;
         }
       }
       a{

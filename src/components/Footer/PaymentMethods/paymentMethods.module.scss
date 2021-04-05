@@ -3,7 +3,7 @@
 .flexStyle{
   align-items: center;
   .image{
-    display: block;
+    display: inline-block !important;
     flex-grow: 4;
     width: 100% !important;
     height: 54px;
@@ -28,6 +28,7 @@
   margin-bottom: 23px;
 }
 .image-pay{
+  display: inline-block;
   max-width: 72px !important;
   img{
     max-width: 100%;

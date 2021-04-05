@@ -234,6 +234,12 @@ main{
   flex-grow: 2;
 }
 
+.homeSectionHeader:before{
+  @include mediaWidth_424{
+    max-height: 600px;
+  }
+
+}
 
 .aboutPage:before{
   max-width: 1217px !important;
@@ -409,6 +415,7 @@ main{
   flex-grow: 1;
   border-radius: 6px;
   transition: .3s;
+  box-shadow: 1px -4px 50px -21px #00000036;
   &:hover{
     transition: .3s;
     background: #0F9547;
@@ -442,6 +449,9 @@ main{
     img{
       max-width: 90px;
     }
+  }
+  .image-photo{
+    margin-bottom: 33px;
   }
 
   .titleCard{

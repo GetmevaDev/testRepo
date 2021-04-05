@@ -11,6 +11,7 @@ import "../scss/main.scss"
 const IndexPage = ({data}) => (
   <Layout marginSocialMedia={50}>
     <SectionHeader
+      classSection={'homeSectionHeader'}
       pretitle={data.strapiHomePage.Section_Header.Pretitle}
       title={data.strapiHomePage.Section_Header.Title}
       linkReadMore={data.strapiHomePage.Section_Header.Link}
