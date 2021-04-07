@@ -80,7 +80,7 @@ render(){
             </div>
             <div>
               <label htmlFor="description">Description</label>
-              <textarea name="message" placeholder={`Comments Or Questions`} name="" id="description" />
+              <textarea name="message" placeholder={`Comments Or Questions`} />
             </div>
             <button  type={`submit`}>Submit</button>
           </form>
