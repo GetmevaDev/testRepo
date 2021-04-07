@@ -35,7 +35,7 @@ class ContactForm extends React.Component{
     e.preventDefault();
     axios({
       method: "POST",
-      url:"http://localhost:3000/contact",
+      url:"https://healthylivingpharmacyli-mailer.herokuapp.com/api/sendMail",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success'){
