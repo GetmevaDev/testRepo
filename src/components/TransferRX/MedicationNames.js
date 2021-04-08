@@ -16,14 +16,14 @@ export class MedicationNames extends React.Component{
 
   addTextarea = () => {
     this.setState({
-      textareaArray: this.state.textareaArray.concat(<div className="textarea-container">
+      textareaArray: this.state.textareaArray.concat(<label className="textarea-container">
                 <textarea
                   name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
                 />
         <button  type={`button`} className={classes.buttonClose} >
           <img src={Cross} alt="" /></button>
-      </div>)
+      </label>)
     })
 
   }
@@ -47,14 +47,14 @@ export class MedicationNames extends React.Component{
 
           this.state.textareaArray.map((item, i) =>{
             return (
-              <div className="textarea-container">
+              <label className="textarea-container">
                 <textarea
                   name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
                 />
               <button onClick={this.removeTextarea.bind(this, i)} type={`button`} className={classes.buttonClose} >
                 <img src={Cross} alt="" /></button>
-            </div>
+            </label>
             )
           })
         }
