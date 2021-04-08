@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Plus from "../../images/plus.svg"
-import { Textarea } from "./Textarea"
 import * as classes from "./FormPrescription/formPrescription.module.scss"
+import Cross from "../../images/Cross.svg"
 
 
 export class MedicationNames extends React.Component{
@@ -16,7 +16,14 @@ export class MedicationNames extends React.Component{
 
   addTextarea = () => {
     this.setState({
-      textareaArray: this.state.textareaArray.concat(<Textarea />)
+      textareaArray: this.state.textareaArray.concat(<div className="textarea-container">
+                <textarea
+                  name="Please Enter Your Refill Numbers or Medication Names"
+                  placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
+                />
+        <button  type={`button`} className={classes.buttonClose} >
+          <img src={Cross} alt="" /></button>
+      </div>)
     })
 
   }
@@ -39,7 +46,16 @@ export class MedicationNames extends React.Component{
         {
 
           this.state.textareaArray.map((item, i) =>{
-            return (<Textarea onclick={this.removeTextarea.bind(this, i)} />)
+            return (
+              <div className="textarea-container">
+                <textarea
+                  name="Please Enter Your Refill Numbers or Medication Names"
+                  placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
+                />
+              <button onClick={this.removeTextarea.bind(this, i)} type={`button`} className={classes.buttonClose} >
+                <img src={Cross} alt="" /></button>
+            </div>
+            )
           })
         }
 
