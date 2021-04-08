@@ -16,14 +16,19 @@ export class MedicationNames extends React.Component{
 
   addTextarea = () => {
     this.setState({
-      textareaArray: this.state.textareaArray.concat(<label className={classes.textareaContainer}>
-                <textarea
-                  name="Please Enter Your Refill Numbers or Medication Names"
+      textareaArray: this.state.textareaArray.concat(
+       <div>
+       <textarea
+                  className={classes.refill}
+                  name="RefillNumbersMedicationNames"
+                  id="RefillNumbersMedicationNames"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
                 />
         <button  type={`button`} className={classes.buttonClose} >
-          <img src={Cross} alt="" /></button>
-      </label>)
+          <img src={Cross} alt="" />
+        </button>
+      </div>
+      )
     })
 
   }
@@ -42,24 +47,27 @@ export class MedicationNames extends React.Component{
   render(){
     return(
       <div className={classes.medicationTextarea}>
+        <label className={classes.textareaContainer}>
+          <h4>Please Enter Your Refill Numbers or Medication Names</h4>
 
         {
 
           this.state.textareaArray.map((item, i) =>{
             return (
-              <label className={classes.textareaContainer}>
-                <h4>Please Enter Your Refill Numbers or Medication Names</h4>
+         <div>
                 <textarea
-                  name="Please Enter Your Refill Numbers or Medication Names"
+                  className={classes.refill}
+                  name="RefillNumbersMedicationNames"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
+                  id="RefillNumbersMedicationNames"
                 />
               <button onClick={this.removeTextarea.bind(this, i)} type={`button`} className={classes.buttonClose} >
                 <img src={Cross} alt="" /></button>
-            </label>
+          </div>
             )
           })
         }
-
+        </label>
         <button
           onClick={this.addTextarea.bind(this)}
           type={`button`}
