@@ -9,6 +9,7 @@ export function Textarea({onclick}){
 
       <div className="textarea-container">
                 <textarea
+                  name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
                 />
         <button onClick={onclick} type={`button`} className={classes.buttonClose} ><img src={Cross} alt="" /></button>

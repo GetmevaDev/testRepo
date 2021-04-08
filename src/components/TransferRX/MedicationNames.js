@@ -41,14 +41,6 @@ export class MedicationNames extends React.Component{
           this.state.textareaArray.map((item, i) =>{
             return (<Textarea onclick={this.removeTextarea.bind(this, i)} />)
           })
-          // textareaArray.map((item, i) =>{
-          //
-          //   return (<Textarea onclick={() => {
-          //     getTextareaArray(textareaArray.slice(0, i))
-          //     getTextareaArray(textareaArray.slice(i +  1))
-          //   }} />)
-          //
-          // })
         }
 
         <button

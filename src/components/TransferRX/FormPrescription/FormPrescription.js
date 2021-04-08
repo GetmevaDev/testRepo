@@ -24,32 +24,40 @@ export function FormPrescription(){
           <h2>{data.strapiTransferRx.Form.Title_Form}</h2>
           <p>{data.strapiTransferRx.Form.Description_Form}</p>
 
-          <form className={`row ${classes.flexStyles}`}>
+          <form
+            name="contact v2"
+            method="post"
+            data-netlify="true"
+            onSubmit="submit"
+            className={`row ${classes.flexStyles}`}>
             <h3>Transfer Your Prescriptions</h3>
+            <input type="hidden" name="form-name" value="contact v2" />
             <div className={classes.formInput}>
-              <h4>First Name</h4>
-              <label>
-                <input placeholder={`Enter First Name`} id={`firstName`} type="text" />
-              </label>
-            </div>
-            <div className={classes.formInput}>
-              <h4> Last Name</h4>
-              <label>
 
-                <input placeholder={`Enter Last Name`} id={`lastName`} type="text" />
+              <label>
+                <h4>First Name</h4>
+                <input name="First Name" placeholder={`Enter First Name`} id={`firstName`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Phone Number</h4>
-              <label>
 
-                <input placeholder={`Enter Phone Number`} id={`phoneNumber`} type="tel" />
+              <label>
+                <h4> Last Name</h4>
+                <input name="Last Name" placeholder={`Enter Last Name`} id={`lastName`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Email Address</h4>
+
               <label>
-                <input placeholder={`Enter Email Address`} id={`emailAddress`} type="email" />
+                <h4>Phone Number</h4>
+                <input name="Phone Number" placeholder={`Enter Phone Number`} id={`phoneNumber`} type="tel" />
+              </label>
+            </div>
+            <div className={classes.formInput}>
+
+              <label>
+                <h4>Email Address</h4>
+                <input name="Email" placeholder={`Enter Email Address`} id={`emailAddress`} type="email" />
               </label>
             </div>
             <div className={classes.formInput}>
@@ -57,13 +65,13 @@ export function FormPrescription(){
 
               <div className="row">
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Female`} type="radio" name={`gender`} />
+                  <input className={classes.radio} id={`Female`} type="radio" name={`Gender`} />
                   <span className={classes.fake}></span>
                   <span>Female</span>
                 </label>
 
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Male`} type="radio" name={`gender`} />
+                  <input className={classes.radio} id={`Male`} type="radio" name={`Gender`} />
                   <span className={classes.fake}></span>
                   <span>Male</span>
                 </label>
@@ -71,58 +79,67 @@ export function FormPrescription(){
             </div>
 
             <div className={classes.formInput}>
-              <h4>Date of Birth</h4>
+
               <label className={classes.date} htmlFor={`dateOfBirth`}>
+                <h4>Date of Birth</h4>
                 <input
                   onfocus="(this.type='date')"
                   placeholder={`Enter Date of Birth`}
                   id={`dateOfBirth`}
                   type="date"
+                  name="Date of Birth"
                 />
               </label>
             </div>
 
 
             <div className={classes.formInput}>
-              <h4>Home Address</h4>
+
               <label>
-                <input placeholder={`Enter Home Address`} id={`emailAddress`} type="text" />
+                <h4>Home Address</h4>
+                <input name="Home Address" placeholder={`Enter Home Address`}  type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Insurance Company</h4>
+
               <label>
-                <input placeholder={`Enter Insurance Company`} id={`emailAddress`} type="text" />
+                <h4>Insurance Company</h4>
+                <input name="Insurance Company" placeholder={`Enter Insurance Company`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>ID Number of Cardholder </h4>
+
               <label>
-                <input placeholder={`Enter ID Number of Cardholder `} id={`emailAddress`} type="text" />
+                <h4>ID Number of Cardholder</h4>
+                <input name="ID Number of Cardholder" placeholder={`Enter ID Number of Cardholder `} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>RxBin</h4>
+
               <label>
-                <input placeholder={`Enter RxBin`} id={`emailAddress`} type="text" />
+                <h4>RxBin</h4>
+                <input name="RxBin" placeholder={`Enter RxBin`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>RxGrp</h4>
+
               <label>
-                <input placeholder={`Enter RxGrp`} id={`emailAddress`} type="text" />
+                <h4>RxGrp</h4>
+                <input name="RxGrp" placeholder={`Enter RxGrp`}  type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>RxPCN</h4>
+
               <label>
-                <input placeholder={`Enter RxPCN`} id={`emailAddress`} type="text" />
+                <h4>RxPCN</h4>
+                <input name="RxPCN" placeholder={`Enter RxPCN`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Insurance Member ID</h4>
+
               <label>
-                <input placeholder={`Enter Insurance Member ID`} id={`emailAddress`} type="text" />
+                <h4>Insurance Member ID</h4>
+                <input name="Insurance Member ID" placeholder={`Enter Insurance Member ID`}  type="text" />
               </label>
             </div>
 
@@ -136,22 +153,23 @@ export function FormPrescription(){
 
                 <div className="row">
                   <label className={classes.labelRadio}>
-                    <input className={classes.radio} id={`Female`} type="radio" name={`allergies`} />
+                    <input className={classes.radio} id={`Yes`} type="radio" name={`Do you have drug allergies?`} />
                     <span className={classes.fake}></span>
                     <span>Yes</span>
                   </label>
 
                   <label className={classes.labelRadio}>
-                    <input className={classes.radio} id={`Male`} type="radio" name={`allergies`} />
+                    <input className={classes.radio} id={`No`} type="radio" name={`Do you have drug allergies?`} />
                     <span className={classes.fake}></span>
                     <span>No</span>
                   </label>
                 </div>
               </div>
               <div className={classes.formInput}>
-                <h4>If yes, please list</h4>
+
                 <label>
-                  <input placeholder={`Enter If yes, please list`} id={`emailAddress`} type="text" />
+                  <h4>If yes, please list</h4>
+                  <input name="If yes, please list" placeholder={`Enter If yes, please list`}  type="text" />
                 </label>
               </div>
             </div>
@@ -159,21 +177,24 @@ export function FormPrescription(){
             <h3>Current Pharmacy Information</h3>
 
             <div className={classes.formInput}>
-              <h4>Pharmacy Name</h4>
+
               <label>
-                <input placeholder={`Enter Pharmacy Name`} id={`emailAddress`} type="text" />
+                <h4>Pharmacy Name</h4>
+                <input name="Pharmacy Name" placeholder={`Enter Pharmacy Name`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Pharmacy Address</h4>
+
               <label>
-                <input placeholder={`Enter Pharmacy Address`} id={`emailAddress`} type="text" />
+                <h4>Pharmacy Address</h4>
+                <input name="Pharmacy Address" placeholder={`Enter Pharmacy Address`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>Pharmacy Phone</h4>
+
               <label>
-                <input placeholder={`Enter Pharmacy Phone`} id={`emailAddress`} type="tel" />
+                <h4>Pharmacy Phone</h4>
+                <input name="Pharmacy Phone" placeholder={`Enter Pharmacy Phone`}  type="tel" />
               </label>
             </div>
             <MedicationNames />
@@ -182,28 +203,30 @@ export function FormPrescription(){
 
               <div className="row" >
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Female`} type="radio" name={`Delivery`} />
+                  <input className={classes.radio} id={`Delivery`} type="radio" name={`Do you have drug allergies?`} />
                   <span className={classes.fake}></span>
                   <span>Delivery</span>
                 </label>
 
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Male`} type="radio" name={`Delivery`} />
+                  <input className={classes.radio} id={`Pick up`} type="radio" name={`Do you have drug allergies?`} />
                   <span className={classes.fake}></span>
                   <span>Pick up</span>
                 </label>
               </div>
             </div>
             <div className={classes.formInput}>
-              <h4>Your Message to Us</h4>
+
               <label>
-                <input placeholder={`Write Here`} id={`emailAddress`} type="tel" />
+                <h4>Your Message to Us</h4>
+                <input name="Your Message to Us" placeholder={`Write Here`}  type="tel" />
               </label>
             </div>
             <div className={classes.formInput}>
-              <h4>7 plus 6 equals?</h4>
+
               <label>
-                <input placeholder={`Write Here`} id={`emailAddress`} type="tel" />
+                <h4>7 plus 6 equals?</h4>
+                <input name="7 plus 6 equals?" placeholder={`Write Here`} type="tel" />
               </label>
             </div>
 
