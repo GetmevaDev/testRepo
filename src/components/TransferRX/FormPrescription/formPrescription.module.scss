@@ -196,7 +196,7 @@
   }
   .button-close{
     position: absolute;
-    top: 0;
+    top: 27px;
     right: 0;
     img{
       margin-right: 0;
@@ -222,3 +222,7 @@
   margin-bottom: 30px;
   margin-left: auto;
 }
+
+ .textarea-container{
+   display: block;
+ }

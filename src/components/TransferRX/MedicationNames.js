@@ -16,7 +16,7 @@ export class MedicationNames extends React.Component{
 
   addTextarea = () => {
     this.setState({
-      textareaArray: this.state.textareaArray.concat(<label className="textarea-container">
+      textareaArray: this.state.textareaArray.concat(<label className={classes.textareaContainer}>
                 <textarea
                   name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
@@ -42,12 +42,13 @@ export class MedicationNames extends React.Component{
   render(){
     return(
       <div className={classes.medicationTextarea}>
-        <h4>Please Enter Your Refill Numbers or Medication Names</h4>
+
         {
 
           this.state.textareaArray.map((item, i) =>{
             return (
-              <label className="textarea-container">
+              <label className={classes.textareaContainer}>
+                <h4>Please Enter Your Refill Numbers or Medication Names</h4>
                 <textarea
                   name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
