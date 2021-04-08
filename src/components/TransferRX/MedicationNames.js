@@ -54,7 +54,7 @@ export class MedicationNames extends React.Component{
           <div>
                 <textarea
                   className={classes.refill}
-                  name="RefillNumbersMedicationNames"
+                  name="Please Enter Your Refill Numbers or Medication Names"
                   placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
                 />
             <button onClick={this.removeTextarea.bind(this, this.state.key)} type={`button`} className={classes.buttonClose} >

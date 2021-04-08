@@ -16,18 +16,23 @@ export function SocialMedia({marginLeft,  className }){
               }
           }
       }
-  `)
+  `);
+
+
+
+
   return(
     <ul style={{
       marginLeft: marginLeft,
     }} className={`row ${className}`}>
       {
         data.strapiContacts.Social_Media.map(list => (
+          list.Link && list.icon[0].url ?
           <li className={classes.icon}>
             <a href={list.Link}>
             <img src={list.icon[0].url} alt={list.icon[0].alternativeText} />
           </a>
-          </li>
+          </li> : null
         ))
       }
 
