@@ -17,7 +17,7 @@ function DndUpload(props) {
     <div className={classes.filesInput}>
       <h4>Attach Prescription Drug Insurance Card (Optional)</h4>
       <div {...getRootProps({className: 'dropzone'})}>
-        <input name="Attach Prescription Drug Insurance Card (Optional)" {...getInputProps()} />
+        <input name="Attach Prescription Drug Insurance Card (Optional)" type="file" {...getInputProps()} />
         <p>{files.length === 0 ? `Drag 'n Drop files here` : <ul>{files}</ul> }</p>
         <span>{files.length === 0 ? `Max file size: 976.56 KB. | Allowed file types: gif,jpeg,png,jpg,pdf` : <ul>{files}</ul> }</span>
         <button type="button" onClick={open}>

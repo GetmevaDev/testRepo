@@ -65,13 +65,13 @@ export function FormPrescription(){
 
               <div className="row">
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Female`} type="radio" name={`Gender`} />
+                  <input className={classes.radio} value={`Female`} type="radio" name={`Gender`} />
                   <span className={classes.fake}></span>
                   <span>Female</span>
                 </label>
 
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Male`} type="radio" name={`Gender`} />
+                  <input className={classes.radio} value={`Male`} type="radio" name={`Gender`} />
                   <span className={classes.fake}></span>
                   <span>Male</span>
                 </label>
@@ -153,13 +153,13 @@ export function FormPrescription(){
 
                 <div className="row">
                   <label className={classes.labelRadio}>
-                    <input className={classes.radio} id={`Yes`} type="radio" name={`Do you have drug allergies?`} />
+                    <input className={classes.radio} value={`Yes`} type="radio" name={`Do you have drug allergies?`} />
                     <span className={classes.fake}></span>
                     <span>Yes</span>
                   </label>
 
                   <label className={classes.labelRadio}>
-                    <input className={classes.radio} id={`No`} type="radio" name={`Do you have drug allergies?`} />
+                    <input className={classes.radio} value={`No`} type="radio" name={`Do you have drug allergies?`} />
                     <span className={classes.fake}></span>
                     <span>No</span>
                   </label>
@@ -203,13 +203,13 @@ export function FormPrescription(){
 
               <div className="row" >
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Delivery`} type="radio" name={`Do you have drug allergies?`} />
+                  <input className={classes.radio} value={`Delivery`} type="radio" name={`Do you have drug allergies?`} />
                   <span className={classes.fake}></span>
                   <span>Delivery</span>
                 </label>
 
                 <label className={classes.labelRadio}>
-                  <input className={classes.radio} id={`Pick up`} type="radio" name={`Do you have drug allergies?`} />
+                  <input className={classes.radio} value={`Pick up`} type="radio" name={`Do you have drug allergies?`} />
                   <span className={classes.fake}></span>
                   <span>Pick up</span>
                 </label>
