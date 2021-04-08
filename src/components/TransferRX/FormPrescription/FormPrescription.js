@@ -29,14 +29,10 @@ export function FormPrescription(){
             method="post"
             data-netlify="true"
             onSubmit="submit"
-            data-netlify-honeypot="bot-field"
             className={`row ${classes.flexStyles}`}>
             <h3>Transfer Your Prescriptions</h3>
             <input type="hidden" name="form-name" value="contact v2" />
-
-            <div hidden>
-              <input name="bot-field" />
-            </div>
+            
             <div className={classes.formInput}>
 
               <label>
