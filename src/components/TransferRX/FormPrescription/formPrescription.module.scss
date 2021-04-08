@@ -214,7 +214,8 @@
  }
 
  .refill{
-   display: block;
+   display: flex;
+   align-items: flex-start;
    width: 100%;
    height: 119px;
    background: rgba(0, 0, 0, 0.01);
@@ -227,4 +228,8 @@
    letter-spacing: 0.1px;
    color: #666666;
    margin-bottom: 21px;
+   &[placeholder="Medication Name(s)/ Or Prescription Number(s)"]{
+     display: flex;
+     align-items: flex-start;
+   }
  }
