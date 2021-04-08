@@ -10,12 +10,14 @@ export class MedicationNames extends React.Component{
     super(props);
     this.state = {
       textareaArray: [],
+      key: 0,
     }
   }
 
 
   addTextarea = () => {
     this.setState({
+
       textareaArray: this.state.textareaArray.concat(
        <div>
        <textarea
@@ -29,7 +31,8 @@ export class MedicationNames extends React.Component{
           <img src={Cross} alt="" />
         </button>
       </div>
-      )
+      ),
+      key: this.state.key + 1,
     })
 
   }
@@ -50,6 +53,17 @@ export class MedicationNames extends React.Component{
       <div className={classes.medicationTextarea}>
         <label className={classes.textareaContainer}>
           <h4>Please Enter Your Refill Numbers or Medication Names</h4>
+          <div>
+                <textarea
+                  className={classes.refill}
+                  name="RefillNumbersMedicationNames"
+                  placeholder={`Medication Name(s)/ Or Prescription Number(s)`}
+                  id="RefillNumbersMedicationNames"
+                  type="text"
+                />
+            <button onClick={this.removeTextarea.bind(this, this.state.key)} type={`button`} className={classes.buttonClose} >
+              <img src={Cross} alt="" /></button>
+          </div>
 
         {
 
@@ -63,7 +77,7 @@ export class MedicationNames extends React.Component{
                   id="RefillNumbersMedicationNames"
                   type="text"
                 />
-              <button onClick={this.removeTextarea.bind(this, i)} type={`button`} className={classes.buttonClose} >
+              <button onClick={this.removeTextarea.bind(this, this.state.key)} type={`button`} className={classes.buttonClose} >
                 <img src={Cross} alt="" /></button>
           </div>
             )
