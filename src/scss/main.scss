@@ -290,6 +290,21 @@ main{
     max-height: 744px;
   }
 }
+
+.contacts{
+  min-height: 634px;
+  .row{
+    @include mediaWidth_767{
+      justify-content: space-around !important;
+    }
+  }
+  img{
+    margin-left: 190px;
+    @include mediaWidth_767{
+      margin-left: 0;
+    }
+  }
+}
 .aboutPage{
 
   .row{
