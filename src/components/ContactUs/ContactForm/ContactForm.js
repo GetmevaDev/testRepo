@@ -1,55 +1,8 @@
 import React from "react"
 import * as classes from "./contactForm.module.scss"
-import axios from "axios"
 
 
 class ContactForm extends React.Component{
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: '',
-  //     email: '',
-  //     phone: '',
-  //     message: ''
-  //   }
-  // }
-  //
-  // onNameChange(event) {
-  //   this.setState({name: event.target.value})
-  // }
-  //
-  // onEmailChange(event) {
-  //   this.setState({email: event.target.value})
-  // }
-  //
-  // onPhoneChange(event) {
-  //   this.setState({phone: event.target.value})
-  // }
-  //
-  // onMsgChange(event) {
-  //   this.setState({message: event.target.value})
-  // }
-  //
-  // submitEmail(e){
-  //   e.preventDefault();
-  //   axios({
-  //     method: "POST",
-  //     url:"https://healthylivingpharmacyli-mailer.herokuapp.com/api/sendMail",
-  //     data:  this.state
-  //   }).then((response)=>{
-  //     if (response.data.status === 'success'){
-  //       console.log("Message Sent.");
-  //       this.resetForm()
-  //     }else if(response.data.status === 'fail'){
-  //       console.log("Message failed to send.")
-  //     }
-  //   })
-  // }
-  //
-  // resetForm(){
-  //   this.setState({name: '', email: '',phone:'', message: ''})
-  // }
 
 
 render(){
@@ -65,15 +18,15 @@ render(){
           >
             <input type="hidden" name="form-name" value="contact v1" />
             <div className={`row ${classes.flexStyles}`}>
-              <div>
+              <div className={classes.flexBlock}>
                 <label htmlFor="name">Name</label>
                 <input name="name" placeholder={`Enter name`} type="text"/>
               </div>
-              <div>
+              <div className={classes.flexBlock}>
                 <label htmlFor="email">Email</label>
                 <input  name="email" placeholder={`Enter email`} type="email" />
               </div>
-              <div>
+              <div className={classes.flexBlock}>
                 <label htmlFor="phone">Phone</label>
                 <input  name="phone" placeholder={`Enter phone`} id={`phone`} type="tel" />
               </div>

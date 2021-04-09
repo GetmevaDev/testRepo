@@ -8,6 +8,12 @@
   flex-wrap: wrap;
 }
 
+.mb{
+  @include mediaWidth_1025{
+    margin-bottom: -190px !important;
+  }
+}
+
 .sectionHeader{
   max-width: 1903px;
   margin: 0 auto;
@@ -111,4 +117,28 @@
   max-width: 484px;
   min-height: 637px;
   border-radius: 10px;
+}
+
+.stylesWithoutImage{
+  min-height: 493px;
+  justify-content: flex-start !important;
+  align-items: center;
+  .block-text{
+    max-width: 100%;
+    h2{
+      @include mediaWidth_1366{
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+
+  h4, h2{
+    margin-left: 230px;
+
+    @include mediaWidth_1366{
+
+      margin-left: 0;
+    }
+  }
 }

@@ -265,6 +265,21 @@ main{
   }
 }
 
+.services{
+  min-height: 634px;
+  .row{
+    @include mediaWidth_767{
+      justify-content: space-around !important;
+    }
+  }
+    img{
+      margin-left: 190px;
+      @include mediaWidth_767{
+        margin-left: 0;
+      }
+    }
+}
+
 .contacts:before{
   max-width: 1217px !important;
   max-height: 497px !important;
@@ -379,6 +394,9 @@ main{
 
 .mtStyles{
   margin-top: -190px;
+  @include mediaWidth_1025{
+    margin-top: 200px;
+  }
 }
 
 .sectionCars{

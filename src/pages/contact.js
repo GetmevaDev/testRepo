@@ -17,6 +17,7 @@ const Contact = ({ data }) => {
         classSection={`aboutDr contacts`}
         title={data.strapiContacts.Section_Header.Title}
         text={data.strapiContacts.Section_Header.Text}
+        map={data.strapiContacts.Key_Map}
       />
       <Contacts
         className={`mtStyles`}
@@ -32,6 +33,7 @@ export default Contact
 export const query = graphql`
     {
         strapiContacts {
+            Key_Map
             Section_Header {
                 Title
                 Text
