@@ -10,6 +10,8 @@ export default function SectionHeader({pretitle, title, specialization, text, li
 
 
   const settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

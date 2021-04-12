@@ -56,9 +56,9 @@ export function SliderCompanies(){
       <Slider {...settings}>
         {
           about.Companies.map(item =>(
-            <a className={classes.linkCompany} key={item.id} href={item.Link}>
+            <span className={classes.linkCompany} key={item.id} >
               <img src={item.Image[0].url} alt={item.Image[0].alternativeText} />
-            </a>
+            </span>
           ))
         }
       </Slider>
