@@ -129,11 +129,34 @@ main{
 }
 
 .slider-styles{
+  height: 731px;
+  border-radius: 20px;
+  @include mediaWidth_700{
+    max-height: 500px;
+  }
+  @include mediaWidth_424{
+    max-height: 320px;
+  }
+
+  .slick-slider{
+    border-radius: 20px !important;
+    @include mediaWidth_700{
+      max-height: 500px;
+    }
+    @include mediaWidth_424{
+      max-height: 320px;
+    }
+  }
   .slick-slide {
     border-radius: 20px;
+
+
+
     img {
+
       max-width: 100%;
       border-radius: 20px;
+      min-height: 320px;
     }
 
   }

@@ -5,18 +5,42 @@ import "./layout.css"
 import { Footer } from "./footer"
 // import { PopUp } from "./PopUp"
 
-const Layout = ({marginSocialMedia, children }) => {
+class Layout extends React.Component{
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     value: ''
+  //   }
+  // }
+  //
+  // componentDidMount() {
+  //   const storedValue = localStorage.getItem("my_value");
+  //   if (storedValue) {
+  //     this.setState({ value: storedValue });
+  //   }
+  // }
+  //
+  // handleChange = e => {
+  //   const value = e.target.value;
+  //   this.setState({ value });
+  //   localStorage.setItem("my_value", value);
+  // }
+
+  // marginSocialMedia, children
+  render() {
+    return (
+      <>
+        <Head />
+        {/*<PopUp watchPopUp={this.state.value} func={this.handleChange.bind(this)} />*/}
+        <Header marginSocialMedia={this.props.marginSocialMedia} />
+        <main>{this.props.children}</main>
+        <Footer />
+      </>
+    )
+  }
 
 
-  return (
-    <>
-      <Head />
-      {/*<PopUp />*/}
-      <Header marginSocialMedia={marginSocialMedia} />
-        <main>{children}</main>
-      <Footer />
-    </>
-  )
 }
 
 export default Layout

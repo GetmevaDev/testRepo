@@ -7,7 +7,7 @@ import { Card } from "../components/common/Card/Card"
 
 import "../scss/main.scss"
 
-const AboutHLP = ({data}) =>{
+const AboutHealthLivingPhamracy = ({data}) =>{
 
   const {Title, Text, Image} = data.strapiAboutHlp.Section_Header;
 
@@ -27,7 +27,7 @@ const AboutHLP = ({data}) =>{
 }
 
 
-export default AboutHLP
+export default AboutHealthLivingPhamracy
 export const query = graphql`
     {
         strapiAboutHlp {

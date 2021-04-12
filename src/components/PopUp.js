@@ -8,11 +8,11 @@
 //
 //
 // export function PopUp(){
-//   const [handleCard, getHandleCard] = useState('false')
+//   const [handleCard, getHandleCard] = useState('true')
 //
 //
 //   const removeCard = () => {
-//     getHandleCard('true');
+//     getHandleCard('false');
 //
 //   }
 //   localStorage.setItem('PopUpOff', handleCard.toString());
@@ -35,8 +35,8 @@
 //
 //   return(
 //     <div style={{
-//       opacity: handleCard && Switch_PopUp && session === 'false' ? 1 : 0,
-//       pointerEvents: handleCard && Switch_PopUp && session === 'false' ? `auto` : `none`,
+//       opacity: handleCard && Switch_PopUp && session ? 1 : 0,
+//       pointerEvents: handleCard && Switch_PopUp ? `auto` : `none`,
 //     }} className={classes.overlay}>
 //       <div style={{
 //         maxWidth: MaxWidthBlock ? `${MaxWidthBlock}px` : 439,
