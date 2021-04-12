@@ -14,6 +14,7 @@ export function AboutUs(){
                   Pretitle
                   Title
                   Text
+                  Link
                   Photo {
                       url
                       alternativeText
