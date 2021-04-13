@@ -14,13 +14,11 @@ export function MenuServices(){
                   slug
               }
           }
-          navMenu: strapiNavigationMenu {
-              Menu_Items {
-                  Page
-                  Submenu{
-                      Link_Page
-                      Page
-                  }
+          navMenu: strapiNavMneuForServices {
+              Services_Menu {
+                  Name_Services
+                  id
+                  Link_Services
               }
           }
       }
@@ -30,12 +28,12 @@ export function MenuServices(){
     <div>
       <ul className={classes.menuContainer}>
         {
-          data.navMenu.Menu_Items[1].Submenu.map(item =>(
-            <li>
+          data.navMenu.Services_Menu.map(item =>(
+            <li key={item.id}>
               <Link activeStyle={{
                 background: '#F07F21',
                 color: '#fff',
-              }} to={item.Link_Page}>{item.Page}</Link>
+              }} to={item.Link_Services}>{item.Name_Services}</Link>
             </li>
           ))
         }

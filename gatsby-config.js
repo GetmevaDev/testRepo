@@ -40,6 +40,7 @@ module.exports = {
           `services-pages`,
           `transfer-rx`,
           `pop-up-warning`,
+          `nav-mneu-for-services`,
         ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
