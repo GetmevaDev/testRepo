@@ -14,6 +14,15 @@ export function MenuServices(){
                   slug
               }
           }
+          navMenu: strapiNavigationMenu {
+              Menu_Items {
+                  Page
+                  Submenu{
+                      Link_Page
+                      Page
+                  }
+              }
+          }
       }
   `);
 
@@ -21,12 +30,12 @@ export function MenuServices(){
     <div>
       <ul className={classes.menuContainer}>
         {
-          data.allStrapiServices.nodes.map(item =>(
+          data.navMenu.Menu_Items[1].Submenu.map(item =>(
             <li>
               <Link activeStyle={{
                 background: '#F07F21',
                 color: '#fff',
-              }} to={`/${item.slug}`}>{item.Title}</Link>
+              }} to={item.Link_Page}>{item.Page}</Link>
             </li>
           ))
         }
