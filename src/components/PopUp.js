@@ -14,7 +14,7 @@ export function PopUp(){
 
 
   const removeCard = () => {
-    setCleanPopUp(false)
+    setCleanPopUp(!cleanPopUp)
   }
 
   console.log(cleanPopUp);
