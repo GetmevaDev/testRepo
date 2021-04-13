@@ -3,7 +3,7 @@ import Head from "./Head"
 import Header from "./header"
 import "./layout.css"
 import { Footer } from "./footer"
-// import { PopUp } from "./PopUp"
+import { PopUp } from "./PopUp"
 
 class Layout extends React.Component{
 
@@ -32,7 +32,7 @@ class Layout extends React.Component{
     return (
       <>
         <Head />
-        {/*<PopUp watchPopUp={this.state.value} func={this.handleChange.bind(this)} />*/}
+        <PopUp />
         <Header marginSocialMedia={this.props.marginSocialMedia} />
         <main>{this.props.children}</main>
         <Footer />
