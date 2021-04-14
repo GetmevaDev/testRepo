@@ -123,6 +123,9 @@
   min-height: 493px;
   justify-content: flex-start !important;
   align-items: center;
+  @include mediaWidth_1025{
+    justify-content: space-around !important;
+  }
   .block-text{
     max-width: 100%;
     h2{

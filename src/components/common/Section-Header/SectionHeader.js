@@ -25,7 +25,7 @@ export default function SectionHeader({pretitle, title, specialization, text, li
       <div
         className={`container-big row ${classes.flexStyles} 
          ${image  ? classes.stylesWithoutImage : ''}`}>
-        <div className={classes.blockText}>
+        <div className={`aboutPageFlex ${classes.blockText }`}>
           {
             pretitle ? <>
               <h4 className={classes.pretitle}>{pretitle}</h4>

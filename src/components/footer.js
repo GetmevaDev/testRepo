@@ -1,6 +1,6 @@
 import React from "react"
 import { Pages } from "./Footer/Pages/Pages"
-import { Services } from "./Footer/Services/Services"
+// import { Services } from "./Footer/Services/Services"
 import { StoreHours } from "./Footer/StoreHours/StoreHours"
 import { PaymentMethods } from "./Footer/PaymentMethods/PaymentMethods"
 import { Logo } from "./Header-components/Logo/Logo"
@@ -13,7 +13,7 @@ export function Footer(){
     <footer className={classes.siteFooter}>
       <div className={`container row ${classes.flexStyles}`}>
         <Pages />
-        <Services />
+        {/*<Services />*/}
         <StoreHours />
         <PaymentMethods />
       </div>

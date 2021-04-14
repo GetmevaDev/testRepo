@@ -48,12 +48,19 @@ max-width: 677px;
     color: #0C1423;
     margin-bottom: 17px;
   }
-  .text{
+  p{
     font-weight: normal;
     font-size: 15px;
     line-height: 22px;
     color: #535353;
     margin-bottom: 35px;
+    text-align: left;
+    padding: 0 !important;
+    strong{
+      font-weight: 600;
+      color: #535353;
+      padding: 0 !important;
+    }
   }
 
   .link{

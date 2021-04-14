@@ -38,11 +38,6 @@ const Header = ({marginSocialMedia}) => {
               Menu_Items {
                   Link_Page
                   Page
-                  Submenu {
-                      Link_Page
-                      Page
-                      id
-                  }
                   id
               }
           }
@@ -73,18 +68,6 @@ const Header = ({marginSocialMedia}) => {
                   data.strapiNavigationMenu.Menu_Items.map(item => (
                     <li key={item.id}>
                       <Link to={item.Link_Page}>{item.Page}</Link>
-                      {
-                        item.Submenu && item.Submenu.length !== 0 ? <ul
-                          className={`${classes.submenu} ${classes.openSubmenu}`}>
-                          {
-                            item.Submenu.map(subitem => (
-                              <li>
-                                <Link to={subitem.Link_Page}>{subitem.Page}</Link>
-                              </li>
-                            ))
-                          }
-                        </ul> : null
-                      }
                     </li>
                   ))
                 }

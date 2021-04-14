@@ -317,9 +317,7 @@ main{
 .contacts{
   min-height: 634px;
   .row{
-    @include mediaWidth_767{
-      justify-content: space-around !important;
-    }
+
   }
   img{
     margin-left: 190px;
@@ -327,14 +325,33 @@ main{
       margin-left: 0;
     }
   }
+  h2{
+    font-size: 50px;
+    line-height: 62px;
+    margin-bottom: 22px;
+    max-width: 680px;
+    @include mediaWidth_1366{
+      text-align: center;
+    }
+    @include mediaWidth_424{
+      margin-bottom: 15px !important;
+    }
+  }
+
 }
 .aboutPage{
+
 
   .row{
     justify-content: center;
     @include mediaWidth_1366{
       justify-content: space-around;
     }
+  }
+  .aboutPageFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   img{
     border-radius: 15px;
@@ -343,6 +360,13 @@ main{
     font-size: 50px;
     line-height: 62px;
     margin-bottom: 22px;
+    max-width: 680px;
+    @include mediaWidth_1366{
+      text-align: center;
+    }
+    @include mediaWidth_424{
+      margin-bottom: 15px !important;
+    }
   }
   p{
     font-size: 16px;
@@ -441,7 +465,13 @@ main{
   padding-top: 50px;
   padding-bottom: 62px;
   @include mediaWidth_1366{
-    padding-top: 18.75rem;
+    padding-top: 1.75rem;
+  }
+  @include mediaWidth_700{
+    padding-top: 10.75rem;
+  }
+  @include mediaWidth_424{
+    padding-top: 14.75rem;
   }
 }
 
