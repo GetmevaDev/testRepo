@@ -290,9 +290,15 @@ main{
 
 .services{
   min-height: 634px;
+  h2{
+    max-width: 600px;
+  }
   .row{
-    @include mediaWidth_767{
+    @include mediaWidth_1025{
       justify-content: space-around !important;
+      img{
+        margin-left: 0;
+      }
     }
   }
     img{

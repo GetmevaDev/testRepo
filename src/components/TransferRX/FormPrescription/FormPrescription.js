@@ -34,14 +34,12 @@ export function FormPrescription(){
             <input type="hidden" name="form-name" value="contact v2" />
 
             <div className={classes.formInput}>
-
               <label>
                 <h4>First Name</h4>
                 <input name="First Name" placeholder={`Enter First Name`} id={`firstName`} type="text" />
               </label>
             </div>
             <div className={classes.formInput}>
-
               <label>
                 <h4> Last Name</h4>
                 <input name="Last Name" placeholder={`Enter Last Name`} id={`lastName`} type="text" />

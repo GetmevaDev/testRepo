@@ -1,9 +1,13 @@
+@import "./src/scss/utils/mixins";
 
 .call-block{
   position: fixed;
   bottom: 30px;
   right: 70px;
   z-index: 15;
+  @include mediaWidth_480{
+    right: 16px;
+  }
 
   a{
     display: inline-block;
