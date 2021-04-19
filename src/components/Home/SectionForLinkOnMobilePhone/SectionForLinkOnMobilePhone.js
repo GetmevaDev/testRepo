@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import Vector from "../../../images/Vector.svg"
-import GooglePlay from "../../../images/google-play-badge.svg"
+import GooglePlay from "../../../images/google-play-badge2.svg"
 import AppStore from "../../../images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
 import * as classes from "./sectionForLinkOnMobilePhone.module.scss"
 
