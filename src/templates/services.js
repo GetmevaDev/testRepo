@@ -14,7 +14,7 @@ const Services = ({ data }) => {
       <SectionHeader
         pretitle={'Our Services'}
         classSection={'aboutDr services'}
-        title={'Healthy Living Services'}
+        title={'Healthy Living Pharmacy'}
         image={Image}
       />
       <SectionContent data={data.strapiServices} />
