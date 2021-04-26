@@ -17,7 +17,7 @@ const Services = ({ data }) => {
         title={'Healthy Living Pharmacy'}
         image={Image}
       />
-      <SectionContent data={data.strapiServices} />
+
     </Layout>
   )
 }

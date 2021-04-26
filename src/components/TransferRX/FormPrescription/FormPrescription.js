@@ -198,7 +198,7 @@ export function FormPrescription(){
             </div>
             <MedicationNames />
             <div className={classes.formInput}>
-              <h4>Do you have drug allergies?</h4>
+              <h4>Do you prefer?</h4>
 
               <div className="row" >
                 <label className={classes.labelRadio}>
