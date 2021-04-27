@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, Autoplay } from 'swiper';
 // Import Swiper styles
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -13,7 +13,7 @@ import * as classes from "./sectionHeader.module.scss"
 
 export default function SectionHeader({pretitle, title, specialization, text, linkReadMore, images, image, map, classSection}){
 
-  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+  SwiperCore.use([Navigation, Autoplay]);
 
   return(
     <section
@@ -51,7 +51,11 @@ export default function SectionHeader({pretitle, title, specialization, text, li
         </div>
         {
           images ? <Swiper
+            loop={true}
+            autoplay={{
+              delay: 2500,
 
+            }}
             slidesPerView={1}
             navigation={{
               nextEl: '.swiper-button-next',
