@@ -13,7 +13,7 @@ const AboutDr = ({ data }) =>{
   return(
     <Layout marginSocialMedia={'34%'}>
       <SectionHeader
-        classSection={'aboutDr'}
+        classSection={'aboutPage dr'}
         title={Name}
         specialization={Specialization}
         text={Text}

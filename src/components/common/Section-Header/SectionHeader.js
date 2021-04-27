@@ -1,23 +1,19 @@
 import React from "react"
 
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
 
 import * as classes from "./sectionHeader.module.scss"
 
 
 export default function SectionHeader({pretitle, title, specialization, text, linkReadMore, images, image, map, classSection}){
 
-
-
-  const settings = {
-    autoplay: true,
-    autoplaySpeed: 3000,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-  };
+  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
   return(
     <section
@@ -54,18 +50,25 @@ export default function SectionHeader({pretitle, title, specialization, text, li
           }
         </div>
         {
-          images ? <div className={`${classes.blockImages } slider-styles`}>
+          images ? <Swiper
 
-            <Slider {...settings}>
+            slidesPerView={1}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+
+            className={`block-images slider-styles`}>
               {
                 images.map(img => (
-                  <img src={img.url} alt={img.alternativeText} />
+                  <SwiperSlide>
+                    <img src={img.url} alt={img.alternativeText} />
+                  </SwiperSlide>
                 ))
               }
-            </Slider>
-
-
-          </div> : null
+              <button className={`swiper-button-next`} type={`button`}></button>
+              <button className={`swiper-button-prev`} type={`button`}></button>
+          </Swiper> : null
         }
         {
           image && image.length !== 0 ? <div className={classes.blockPhoto}>

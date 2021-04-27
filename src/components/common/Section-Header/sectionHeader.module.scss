@@ -42,14 +42,7 @@
   }
 }
 
-.block-images{
-  max-width: 980px;
-  border-radius: 20px;
-  @include mediaWidth_1366{
-    max-width: 710px;
-  }
 
-}
 
 .block-photo{
   max-width: 484px;
