@@ -54,14 +54,12 @@ export default function SectionHeader({pretitle, title, specialization, text, li
             loop={true}
             autoplay={{
               delay: 2500,
-
             }}
             slidesPerView={1}
             navigation={{
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             }}
-
             className={`block-images slider-styles`}>
               {
                 images.map(img => (
