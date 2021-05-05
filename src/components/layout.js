@@ -5,6 +5,7 @@ import "./layout.css"
 import { Footer } from "./footer"
 import { PopUp } from "./PopUp"
 import { CallButton } from "./CallButton"
+import TimesWorks from "./TimesWorks"
 
 const Layout = ({marginSocialMedia, children }) => {
 
@@ -14,6 +15,7 @@ const Layout = ({marginSocialMedia, children }) => {
         <Head />
         <PopUp />
         <CallButton />
+          <TimesWorks />
         <Header marginSocialMedia={marginSocialMedia} />
         <main>{children}</main>
         <Footer />
