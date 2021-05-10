@@ -137,40 +137,40 @@ main{
 
 
 
-//.slider-company-styles{
-//  .slick-arrow{
-//    width: 50px;
-//    height: 50px;
-//    background: #F07F21;
-//    z-index: 10;
-//    border-radius: 10px;
-//
-//    &:hover{
-//      background: #F07F21;
-//    }
-//  }
-//  .slick-arrow:focus{
-//    background: #F07F21;
-//  }
-//  .slick-prev{
-//    left: -79px;
-//
-//    &:before{
-//      font-size: 0 !important;
-//      content: url("../images/CombinedShape.svg");
-//
-//
-//    }
-//  }
-//
-//  .slick-next{
-//    right: -79px;
-//    &:before{
-//      font-size: 0 !important;
-//      content: url("../images/CombinedShape2.svg");
-//    }
-//  }
-//}
+.slider-company-styles{
+  .slick-arrow{
+    width: 50px;
+    height: 50px;
+    background: #F07F21;
+    z-index: 10;
+    border-radius: 10px;
+
+    &:hover{
+      background: #F07F21;
+    }
+  }
+  .slick-arrow:focus{
+    background: #F07F21;
+  }
+  .slick-prev{
+    left: -79px;
+
+    &:before{
+      font-size: 0 !important;
+      content: url("../images/CombinedShape.svg");
+
+
+    }
+  }
+
+  .slick-next{
+    right: -79px;
+    &:before{
+      font-size: 0 !important;
+      content: url("../images/CombinedShape2.svg");
+    }
+  }
+}
 //
 //.slider-styles{
 //  height: 731px;
