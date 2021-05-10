@@ -74,7 +74,7 @@ img{
 
 main{
   overflow: hidden;
-  top: -129px
+  margin-top: -129px;
 }
 
 .container{
@@ -278,6 +278,7 @@ main{
 
     }
   h2{
+    font-family: $mainFont;
     font-weight: 600;
     font-size: 20px;
     line-height: 23px;
