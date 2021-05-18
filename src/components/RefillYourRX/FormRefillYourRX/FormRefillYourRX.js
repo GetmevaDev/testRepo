@@ -36,7 +36,11 @@ export function FormRefillYourRX(){
 
             <div className={classes.flexBlock}>
               <label htmlFor="name">First Name</label>
-              <input name="First Name" placeholder={`Enter First Name`} id={`name`} type="text"/>
+              <input name="First Name" placeholder={`Enter First Name`} id={`First-name`} type="text"/>
+            </div>
+            <div className={classes.flexBlock}>
+              <label htmlFor="name">Last Name</label>
+              <input name="First Name" placeholder={`Enter Last Name`} id={`Last-name`} type="text"/>
             </div>
 
             <div className={classes.flexBlock}>

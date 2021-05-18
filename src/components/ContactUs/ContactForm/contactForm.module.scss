@@ -4,8 +4,12 @@
 .flexStyles{
   justify-content: space-between;
   margin-bottom: 21px;
+  flex-wrap: wrap;
+  .flex-block{
+    margin-bottom: 10px;
+  }
   @include mediaWidth_1163{
-    flex-wrap: wrap;
+
     .flex-block{
       flex-grow: 1;
       input{
