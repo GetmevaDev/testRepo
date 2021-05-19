@@ -639,3 +639,29 @@ main{
     border: 2px solid rgba(12,20,35,.07);
   }
 }
+
+.manufacturer{
+  justify-content: center;
+  .adaptive-m{
+    @include mediaWidth_480{
+      margin-left: 0 !important;
+    }
+  }
+  img{
+    width: 79px;
+    height: 35px;
+  }
+  p{
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #999999;
+    margin-bottom: 0;
+    a{
+      display: inline;
+      color: #BCA667;
+    }
+  }
+}
