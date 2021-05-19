@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 export default function Head(){
   return(
     <Helmet>
+      <title>Long Island City Pharmacy - Healthy Living Pharmacy LIC: 11101</title>
       <meta property="og:title" content="Long Island City Pharmacy - Healthy Living Pharmacy LIC: 11101" />
       <meta property="og:description" content="Our Long Island City Pharmacy is the neighborhood healer with decades of experience. We merged homeopathic, holistic medicine with traditional pharmaceuticals." />
       <meta property="twitter:title" content="Long Island City Pharmacy - Healthy Living Pharmacy LIC: 11101" />
