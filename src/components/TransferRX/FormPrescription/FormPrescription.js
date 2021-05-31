@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import DndUpload from "../dndUpload"
 import { MedicationNames } from "../MedicationNames"
+import {useDropzone} from 'react-dropzone';
+import Image from "../../../images/Group13.svg"
 import * as classes from "./formPrescription.module.scss"
 
 
@@ -18,6 +20,14 @@ export function FormPrescription(){
             }
         }
     `)
+
+  const {acceptedFiles, getRootProps, open, getInputProps} = useDropzone();
+
+  const files = acceptedFiles.map(file => (
+    file.size <= 999997.44 || file.size === 999997.44 ? <li key={file.path}>
+      {file.path} - {file.size} bytes
+    </li> : <span>File size is too large</span>
+  ));
     return (
       <section className={classes.sectionFormPrescription}>
         <div className="container">
@@ -142,8 +152,24 @@ export function FormPrescription(){
               </label>
             </div>
 
-            <DndUpload />
+            {/*<DndUpload />*/}
+            <div className={classes.filesInput}>
+              <label htmlFor="file">
+                <h4>Attach Prescription Drug Insurance Card (Optional)</h4>
+              </label>
 
+              <div {...getRootProps({className: 'dropzone'})}>
+                <input id={`file`} name="Attach Prescription Drug Insurance Card (Optional)" type="file" {...getInputProps()} />
+                <p>{files.length === 0 ? `Drag 'n Drop files here` : <ul>{files}</ul> }</p>
+                <span>{files.length === 0 ? `Max file size: 976.56 KB. | Allowed file types: gif,jpeg,png,jpg,pdf` : <ul>{files}</ul> }</span>
+                <button type="button" onClick={open}>
+                  <img src={Image} alt="" />
+                  Select Files
+                </button>
+
+              </div>
+
+            </div>
             <div className="row" style={{
               flexWrap: `wrap`,
             }}>
