@@ -35,12 +35,12 @@ export function FormRefillYourRX(){
           <div className={`row ${classes.flexStyles}`}>
 
             <div className={classes.flexBlock}>
-              <label htmlFor="name">First Name</label>
+              <label htmlFor="First-name">First Name</label>
               <input name="First Name" placeholder={`Enter First Name`} id={`First-name`} type="text"/>
             </div>
             <div className={classes.flexBlock}>
-              <label htmlFor="name">Last Name</label>
-              <input name="First Name" placeholder={`Enter Last Name`} id={`Last-name`} type="text"/>
+              <label htmlFor="Last-name">Last Name</label>
+              <input name="Last Name" placeholder={`Enter Last Name`} id={`Last-name`} type="text"/>
             </div>
 
             <div className={classes.flexBlock}>
@@ -55,7 +55,7 @@ export function FormRefillYourRX(){
           </div>
           <div>
             <label htmlFor="description">Please Enter Your Refill Numbers or Medication Names</label>
-            <textarea name="Please Enter Your Refill Numbers or Medication Names" placeholder={`Refill # or Name`} />
+            <textarea name="Please Enter Your Refill Numbers or Medication Names" id={`description`} placeholder={`Refill # or Name`} />
           </div>
 
           <div className={`row ${classes.flexStyles}`}>
