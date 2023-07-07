@@ -20,14 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.DEPLOY_URL
-          ? "https://cms-healthylivingpharmacylic.herokuapp.com"
-          : "http://localhost:1337",
+        apiURL: "https://cms-healthylivingpharmacylic.herokuapp.com",
         queryLimit: 1000, // Default to 100
-        contentTypes: [
-          `about-drs`,
-          `services`,
-        ],
+        contentTypes: [`about-drs`, `services`],
         // //If using single types place them in this array.
         singleTypes: [
           `home-page`,
