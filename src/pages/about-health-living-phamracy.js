@@ -20,7 +20,7 @@ const AboutHealthLivingPhamracy = ({data}) =>{
       text={Text}
       image={Image}
       />
-      <Card data={data.strapiAboutHlp} classStyles={'cardAbout'} />
+      {/*<Card data={data.strapiAboutHlp} classStyles={'cardAbout'} />*/}
       <SectionConsultation />
     </Layout>
   )
